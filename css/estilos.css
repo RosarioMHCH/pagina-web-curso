@@ -1,0 +1,115 @@
+
+
+
+.body{
+    font-family: "Poppins" sans-serif;
+    font-size: 1.2rem;
+    min-height: 100%;
+    padding: 20px;
+}
+
+.logo{
+    width: 100px;
+}
+
+.logo-empresa{
+    display: flex;
+    justify-content: space-around;
+}
+
+.nombre-empresa{
+    color: rgb(27, 20, 20);
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.link{
+    font-family: 'Times New Roman', Times, serif;
+    margin: 50px;
+    font-size: 23px;
+    margin: 50px;
+}
+
+a{
+    text-decoration: none;
+}
+
+.redes{
+    width: 20px;
+
+}
+
+
+.grid-container > * {
+    box-shadow: -1px 1px 7px 0px rgb(135, 159, 180);
+    border-radius: 4px;
+    padding: 10px;
+    text-align: center;
+
+}
+
+
+
+.grid-container{
+    display: grid;
+    gap: 10px; 
+    
+    grid-template: 
+        "header"
+        "nav"
+        "main"
+        "footer"
+        ;
+}
+
+    .header{
+        grid-area: header;
+        background-color: rgb(84, 137, 235);
+        border-bottom: 2px solid;
+        font-size: 20px;
+
+
+    }
+
+    .nav{
+        grid-area: nav;
+        background-color: lightskyblue;
+        
+    }
+
+    .main{
+        grid-area: main;
+        background-color: rgb(172, 214, 240);
+
+    }
+
+
+    .footer{
+        grid-area: footer;
+        background-color: lightblue;
+        
+    }
+ 
+    @media (min-width:600px){
+        .grid-container{
+
+            grid-template:
+            "header header" 120px
+            "nav main"  auto
+            "footer footer" 200px/
+            200px auto           
+            ;
+        }
+    } 
+
+    @media (min-width:900px){
+        .grid-container{
+
+            grid-template:
+            "header header header" 120px
+            "nav main main"  auto
+            "footer footer footer" 200px/
+            300px auto           
+            ;
+        }
+    } 
+
